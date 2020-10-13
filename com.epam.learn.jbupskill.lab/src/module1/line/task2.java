@@ -14,7 +14,7 @@ public class task2 {
         b = 2.0;
         c = 2.0;
 
-        rez = (b + Math.sqrt((b * b + 4 * a * c))) / (2 * a) + Math.pow(a, 3) * c + Math.pow(b, -2);
+        rez = (b + Math.sqrt((b * b + 4 * a * c))) / (2 * a) - Math.pow(a, 3) * c + Math.pow(b, -2);
         System.out.println("rez = " + rez);
 
     }
