@@ -6,8 +6,8 @@ public class task2 {
         double a = 0;
         double b = 4;
         double h = 0.5;
-        double x = a;
-        for (x = a; x <= b; x += h) {
+
+        for (double x = a; x <= b; x += h) {
             System.out.print("x = " + x + ", ");
             if (x > 2) {
                 System.out.println("y = " + x);

@@ -6,18 +6,17 @@ import java.util.Scanner;
 public class task1 {
     public static void main(String[] args) {
         boolean success = false;
+        Scanner scanner = new Scanner(System.in);
         do {
             System.out.println("Enter any integer positive number:");
-            Scanner number = new Scanner(System.in);
-            int number1;
-            int number2 = number.nextInt();
-            int sum = 0;
-            if (number2 > 0) {
-                for (number1 = 1; number1 <= number2 && !success; number1++)
-                    sum = sum + number1;
+            int number = scanner.nextInt();
+            if (number > 0) {
+                int sum = 0;
+                for (int i = 1; i <= number; i++) {
+                    sum = sum + i;
+                }
                 System.out.println("Sum of all numbers " + sum);
                 success = true;
-                //break;
             } else {
                 System.out.println("Enter other number");
             }
