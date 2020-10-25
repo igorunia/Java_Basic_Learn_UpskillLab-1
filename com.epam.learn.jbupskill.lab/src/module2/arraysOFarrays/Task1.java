@@ -4,14 +4,18 @@ package module2.arraysOFarrays;
 
 public class Task1 {
     public static void main(String[] args) {
-        int[][] matrixArray = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}};
+        int[][] matrixArray = new int[][]{
+                {6, 2, 9, 2},
+                {5, 6, 7, 8}
+        };
         for (int i = 0; i < matrixArray.length; i++) {
-            for (int j = 0; j < matrixArray[i].length; j++) {
-                if ((j + 1) % 2 != 0) {
-                    System.out.print(matrixArray[i][j]);
+            for (int j = 0; j < matrixArray[0].length; j++) {
+                if ((j + 1) % 2 != 0 && matrixArray[0][j] > matrixArray[matrixArray.length - 1][j]) {
+                    System.out.print(matrixArray[i][j] + " ");
                 }
             }
-            System.out.println();
+            System.out.println( );
         }
     }
 }
+
