@@ -34,6 +34,24 @@ public class Task13 {
             }
             System.out.println();
         }
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                for (int k = i + 1; k < matrix.length; k++) {
+                    if (matrix[i][j] < matrix[k][j]) {
+                        sorting = matrix[i][j];
+                        matrix[i][j] = matrix[k][j];
+                        matrix[k][j] = sorting;
+                    }
+                }
+            }
+        }
+        System.out.println();
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
         System.out.println();
     }
 }
