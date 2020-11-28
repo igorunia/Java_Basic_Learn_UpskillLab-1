@@ -4,7 +4,6 @@ package module2.decompositionUsingmethods;
  * На плоскости заданы своими координатами n точек. Написать метод(методы), определяющие,
  * между какими из пар точек самое большое расстояние. Указание. Координаты точек занести в массив.
  */
-
 public class Task4 {
     public static void main(String[] args) {
 
@@ -26,7 +25,6 @@ public class Task4 {
     }
 
     public static double getDistance(double x1, double y1, double x2, double y2) {
-        double distance = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
-        return distance;
+        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 }
