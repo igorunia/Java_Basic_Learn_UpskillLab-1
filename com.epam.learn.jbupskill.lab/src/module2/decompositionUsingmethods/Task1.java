@@ -1,27 +1,24 @@
 package module2.decompositionUsingmethods;
-//Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего
-// общего кратного двух натуральных чисел:(НОК A.B ,A.B/НОД(A.B)
+
+/**
+ * Написать метод(методы) для нахождения наибольшего общего делителя и наименьшего
+ * общего кратного двух натуральных чисел:(НОК A.B ,A.B/НОД(A.B)
+ */
 
 public class Task1 {
     public static void main(String[] args) {
-        int a = 12;
-        int b = 30;
-        int NOK =   0;
-        int NOD = 0;
-        NOD = getNod(a, b, NOD);
-        output(NOD);
-        NOK = getNok(a, b, NOD);
-        output(NOK);
+        int a = 14;
+        int b = 21;
+        System.out.println("NOD = " + getNod(a, b));
+        System.out.println("NOK = " + getNok(a, b));
     }
-    private static int getNok(int a, int b, int NOD) {
-        int NOK;
-        NOK = a * b / getNod(a, b, NOD);
-        return NOK;
+
+    public static int getNok(int a, int b) {
+        int result = a * b / getNod(a, b);
+        return result;
     }
-    private static void output(int NOD) {
-        System.out.println(NOD);
-    }
-    private static int getNod(int a, int b, int NOD) {
+    public static int getNod(int a, int b) {
+        int result = 0;
         while (a != b) {
             if (a < b) {
                 int temp = a;
@@ -30,9 +27,9 @@ public class Task1 {
             } else {
                 a = a - b;
             }
-            NOD = a;
+            result = a;
         }
-        return NOD;
+        return result;
     }
 }
 
