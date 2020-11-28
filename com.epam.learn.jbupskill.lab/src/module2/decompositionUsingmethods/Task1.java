@@ -6,7 +6,7 @@ public class Task1 {
     public static void main(String[] args) {
         int a = 12;
         int b = 30;
-        int NOK = 0;
+        int NOK =   0;
         int NOD = 0;
         NOD = getNod(a, b, NOD);
         output(NOD);
