@@ -10,14 +10,17 @@ public class Task10 {
     public static void main(String[] args) {
         int n = 8;
         int[] array = new int[]{1, 2, 3, 4};
-        getNewarray(array,n);
+        getNewArray(array, n);
 
     }
 
-    public static void getNewarray(int[] array, int n) {
+    public static int getNewArray(int[] array, int n) {
+        int rez = 0;
         for (int i = 0; i < array.length; i++) {
-            array[i] = n;
+            rez = array[i];
+            rez = n;
         }
         System.out.println(Arrays.toString(array));
+        return rez;
     }
 }

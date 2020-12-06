@@ -15,7 +15,7 @@ public class Task9 {
 
     }
 
-    public static double getSstrictTriangle(double x, double y) {
+    public static double getStrictTriangle(double x, double y) {
         return (x * y) / 2;
     }
 
@@ -26,7 +26,7 @@ public class Task9 {
     }
 
     public static double getSquadrangle(double x, double y, double z, double t) {
-        return getSstrictTriangle(x, y) + getStriangle(x, y, z, t);
+        return getStrictTriangle(x, y) + getStriangle(x, y, z, t);
 
     }
 
