@@ -7,5 +7,5 @@
     - [Theory](md/module2/Algorithmization.md)
     - [Tasks](md/module2/Tasks.md)
 3. Strings and basics of text processing
-    - [Theory](md/module3/Strings and basics of text processing.md)
+    - [Theory](/md/module3/Strings and basics of text processing.md)
     - [Tasks](md/module3/Tasks.md)
