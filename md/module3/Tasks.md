@@ -13,7 +13,7 @@ Working with a string as an array of characters
 
 ### Working with a string as a String or StringBuilder
 
-1. [Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.]
+1. [Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task1.java)
 
 2. [В строке вставить после каждого символа 'a' символ 'b'.]
 
