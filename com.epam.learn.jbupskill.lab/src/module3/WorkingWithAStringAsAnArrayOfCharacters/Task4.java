@@ -1,4 +1,4 @@
-package module3.Chars;
+package module3.WorkingWithAStringAsAnArrayOfCharacters;
 
 /**
  * В строке найти количество чисел.
@@ -15,7 +15,7 @@ public class Task4 {
             if (isDigit(textCharsArray[i])) {
                 digitCounter++;
                 numberCounter++;
-                while (i < textCharsArray.length-1 && isDigit(textCharsArray[i + 1])) {
+                while (i < textCharsArray.length - 1 && isDigit(textCharsArray[i + 1])) {
                     i++;
                     digitCounter++;
                 }
@@ -36,6 +36,5 @@ public class Task4 {
 
     }
 }
-
 
 
