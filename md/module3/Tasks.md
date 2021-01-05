@@ -15,9 +15,9 @@ Working with a string as an array of characters
 
 1. [Дан текст (строка). Найдите наибольшее количество подряд идущих пробелов в нем.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task1.java)
 
-2. [В строке вставить после каждого символа 'a' символ 'b'.]
+2. [В строке вставить после каждого символа 'a' символ 'b'.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task2.java)
 
-3. [Проверить, является ли заданное слово палиндромом.]
+3. [Проверить, является ли заданное слово палиндромом.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task3.java)
 
 4. [С помощью функции копирования и операции конкатенации составить из частей слова “информатика” слово “торт”.]
 
