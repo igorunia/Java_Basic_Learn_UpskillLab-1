@@ -23,15 +23,15 @@ Working with a string as an array of characters
 
 5. [Подсчитать, сколько раз среди символов заданной строки встречается буква “а”.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task5.java)
 
-6. [Из заданной строки получить новую, повторив каждый символ дважды.]
+6. [Из заданной строки получить новую, повторив каждый символ дважды.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task6.java)
 
-7. [Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde def", то должно быть выведено "abcdef"]
+7. [Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde def", то должно быть выведено "abcdef"](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task7.java)
 
 8. [Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран. Случай, когда самых длинных слов может быть несколько, не обрабатывать.]
 
-9. [Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке. Учитывать только английские буквы.]
+9. [Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке. Учитывать только английские буквы.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task9.java)
 
-10. [Строка X состоит из нескольких предложений, каждое из которых кончается точкой, восклицательным или вопросительным знаком. Определить количество предложений в строке X.]
+10. [Строка X состоит из нескольких предложений, каждое из которых кончается точкой, восклицательным или вопросительным знаком. Определить количество предложений в строке X.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task10.java)
 
 ### Working with regular expressions (Pattern, Matcher)
 
