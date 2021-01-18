@@ -8,20 +8,10 @@ public class Task6 {
         String text = "year";
         StringBuilder doubleText = new StringBuilder();
 
-        for (int i = 0; i < text.length(); i++) {
-            if (text.charAt(i) == 'y') {
-                doubleText.append("yy");
-            }
-            if (text.charAt(i) == 'e') {
-                doubleText.append("ee");
-            }
-            if (text.charAt(i) == 'a') {
-                doubleText.append("aa");
-            }
-            if (text.charAt(i) == 'r') {
-                doubleText.append("rr");
-            }
+        for (char ch : text.toCharArray()) {
+            doubleText.append(ch).append(ch);
         }
+
         String makeNewtext = doubleText.toString();
         System.out.println(makeNewtext);
     }

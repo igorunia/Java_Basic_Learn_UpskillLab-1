@@ -27,7 +27,7 @@ Working with a string as an array of characters
 
 7. [Вводится строка. Требуется удалить из нее повторяющиеся символы и все пробелы. Например, если было введено "abc cde def", то должно быть выведено "abcdef"](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task7.java)
 
-8. [Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран. Случай, когда самых длинных слов может быть несколько, не обрабатывать.]
+8. [Вводится строка слов, разделенных пробелами. Найти самое длинное слово и вывести его на экран. Случай, когда самых длинных слов может быть несколько, не обрабатывать.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task8.java)
 
 9. [Посчитать количество строчных (маленьких) и прописных (больших) букв в введенной строке. Учитывать только английские буквы.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAStringOrStringBuilder/Task9.java)
 

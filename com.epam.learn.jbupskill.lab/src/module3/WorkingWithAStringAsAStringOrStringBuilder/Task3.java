@@ -11,7 +11,7 @@ public class Task3 {
         String palindrome = builder.toString();
         System.out.println(palindrome);
 
-        if (word == palindrome) {
+        if (word.equals(palindrome)) {
             System.out.println("It is palindrome!");
         } else {
             System.out.println("It is not palindrome!");

@@ -6,7 +6,7 @@ package module3.WorkingWithAStringAsAStringOrStringBuilder;
  */
 public class Task7 {
     public static void main(String[] args) {
-        String text = "abc cde def";
+        String text = "  abc cde def";
         StringBuilder deleteOddtext = new StringBuilder(text);
 
         for (int i = 0; i < deleteOddtext.length(); i++) {
@@ -14,12 +14,12 @@ public class Task7 {
                 deleteOddtext.deleteCharAt(i);
                 i--;
             }
+        }
 
-
-            for (int j = i + 1; j < deleteOddtext.length(); j++) {
-                if (deleteOddtext.charAt(j) == deleteOddtext.charAt(i)) {
-                    deleteOddtext.deleteCharAt(j);
-                }
+        for (int i = 0; i < deleteOddtext.length() - 1; i++) {
+            if (deleteOddtext.charAt(i) == deleteOddtext.charAt(i + 1)) {
+                deleteOddtext.deleteCharAt(i);
+                i--;
             }
         }
 

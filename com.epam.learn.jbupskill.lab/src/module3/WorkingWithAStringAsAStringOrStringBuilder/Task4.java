@@ -7,25 +7,17 @@ public class Task4 {
     public static void main(String[] args) {
         String word = "информатика";
         StringBuilder cake = new StringBuilder();
-        for (int i = 0; i < word.length(); i++) {
-            if (word.charAt(i) == 'т') {
-                cake.append('т');
-                cake.indexOf("т");
-            }
+        int letterT = word.indexOf("т");
+        char charT = word.charAt(letterT);
+        int letterO = word.indexOf("о");
+        char charO = word.charAt(letterO);
+        int letterR = word.indexOf("р");
+        char charR = word.charAt(letterR);
+        cake.append(charT);
+        cake.append(charO);
+        cake.append(charR);
+        cake.append(charT);
 
-            if (word.charAt(i) == 'о') {
-                cake.append('о');
-                cake.indexOf("о");
-            }
-            if (word.charAt(i) == 'р') {
-                cake.append('р');
-                cake.indexOf("р");
-            }
-            if (word.charAt(i) == 'т') {
-                cake.append('т');
-                cake.indexOf("т");
-            }
-        }
         String makeWord = cake.toString();
         System.out.println(makeWord);
     }
