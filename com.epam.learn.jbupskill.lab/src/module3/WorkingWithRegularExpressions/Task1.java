@@ -1,9 +1,6 @@
 package module3.WorkingWithRegularExpressions;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,10 +12,10 @@ import java.util.regex.Pattern;
  */
 public class Task1 {
     public static void main(String[] args) {
-        String text = "aa. aaaaa. a!\n" +
+        String text = "aa. aa a aaa. a!\n" +
                 "Второй абзац. Пять предложений. Это третье предложение. Это четвертое. И это пятое...\n" +
                 "Третий абзац и всего одно предложение.\n" +
-                "Четвертый абзац. Привет, приветы, приветули.";
+                "Четвертый aбзац. Приaвет, приaветы, приaaветули, a.";
 
         System.out.println("Choose one of the sorting method:\n" +
                 " 1 - отсортировать абзацы по количеству предложений;\n" +
@@ -56,9 +53,9 @@ public class Task1 {
                     String group2 = matcher2.group();
                     listWords.add(group2);
                 }
-                listWords.sort((a,b)-> Integer.compare(a.length(),b.length()));
+                listWords.sort((a, b) -> Integer.compare(a.length(), b.length()));
 
-                for(String word2 : listWords) {
+                for (String word2 : listWords) {
 
                     System.out.print(word2 + " ");
                 }
@@ -66,6 +63,7 @@ public class Task1 {
             }
         }
         if (method == 3) {
+            String c = scanner.next().substring(0, 1);
             List<String> listText = new ArrayList<>();
             Pattern pattern = Pattern.compile("[^.!?]+");
             Matcher matcher = pattern.matcher(text);
@@ -75,20 +73,21 @@ public class Task1 {
                 listText.add(group3);
             }
             for (String word3 : listText) {
-                List<String> listWords3 = new ArrayList<>();
-                Pattern pattern3 = Pattern.compile("(\\w)\\1+");
+                Pattern pattern3 = Pattern.compile("[a-zA-Zа-яА-Я]+");
                 Matcher matcher3 = pattern3.matcher(word3);
+
+                List<String> listWords3 = new ArrayList<>();
                 while (matcher3.find()) {
                     String group3 = matcher3.group();
                     listWords3.add(group3);
                 }
-                listWords3.sort(Comparator.comparingInt(Task1::lexmeCount));
+                listWords3.sort(Comparator.comparingLong((String a) -> charCount(a, c)).reversed());
 
-                for(String word4 : listWords3) {
-
-                    System.out.print(word4 + " ");
+                StringJoiner stringJoiner = new StringJoiner(" ", "", ".");
+                for (String word4 : listWords3) {
+                    stringJoiner.add(word4);
                 }
-                System.out.println(".");
+                System.out.println(stringJoiner.toString());
             }
         }
 
@@ -104,15 +103,16 @@ public class Task1 {
         }
         return listText.size();
     }
-    private static int lexmeCount(String group) {
-        List<String> listText = new ArrayList<>();
-        Pattern pattern = Pattern.compile("(\\w)\\1+");
-        Matcher matcher = pattern.matcher(group);
-        while (matcher.find()) {
-            String group2 = matcher.group();
-            listText.add(group2);
+
+    private static int charCount(String group, String c) {
+        String[] split = group.split("");
+        int counter = 0;
+        for (String s : split) {
+            if (s.contains(c)) {
+                counter++;
+            }
         }
-        return listText.size();
+        return counter;
     }
 
 }
