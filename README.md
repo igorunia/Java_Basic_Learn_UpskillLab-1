@@ -9,3 +9,7 @@
 3. Strings and basics of text processing
     - [Theory](md/module3/Strings%20and%20basics%20of%20text%20processing.md)
     - [Tasks](md/module3/Tasks.md)
+4. Programming with classes
+    - [Theory](md/module4/Programming%20with%20classes.md)
+    - [Tasks](md/module4/Tasks.md)
+    
