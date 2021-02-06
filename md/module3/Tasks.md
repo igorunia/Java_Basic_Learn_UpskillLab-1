@@ -1,5 +1,5 @@
-### 
-Working with a string as an array of characters
+### Working with a string as an array of characters
+
 
 1. [Дан массив названий переменных в camelCase. Преобразовать названия в snake_case.](../../com.epam.learn.jbupskill.lab/src/module3/WorkingWithAStringAsAnArrayOfCharacters/Task1.java)
 
