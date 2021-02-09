@@ -1,28 +1,21 @@
-package module4.TheSimplestClassesAndObjects;
+package module4.TheSimplestClassesAndObjects.Task2;
 
 /**
  * Создайте класс Test2 двумя переменными. Добавьте конструктор с входными параметрами.
  * Добавьте конструктор, инициализирующий члены класса по умолчанию.
  * Добавьте set- и get- методы для полей экземпляра класса.
  */
+public class Test2 {
 
-public class Task2 {
-    public static void main(String args[]) {
+    private int a;
+    private int b;
 
-
-    }
-}
-
-class Test2 {
-    int a = 1;
-    int b = 2;
-
-    Test2(int a, int b) {
+    public Test2(int a, int b) {
         this.a = a;
         this.b = b;
     }
 
-    Test2() {
+   public Test2() {
         this.a = 1;
         this.b = 2;
     }
@@ -43,6 +36,4 @@ class Test2 {
         return b;
     }
 }
-
-
 
