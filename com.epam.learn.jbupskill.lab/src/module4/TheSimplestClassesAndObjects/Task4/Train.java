@@ -8,17 +8,29 @@ package module4.TheSimplestClassesAndObjects.Task4;
  * быть упорядочены по времени отправления.
  */
 public class Train {
-    public String nameOfDestination;
-    public String numberOfTrain;
-    public String timeOfDeparture;
+    private final String nameOfDestination;
+    private final String numberOfTrain;
+    private final String timeOfDeparture;
 
-    public Train(String nameOfDestination, String  numberOfTrain, String timeOfDeparture){
+    public Train(String nameOfDestination, String numberOfTrain, String timeOfDeparture) {
         this.nameOfDestination = nameOfDestination;
         this.numberOfTrain = numberOfTrain;
         this.timeOfDeparture = timeOfDeparture;
     }
 
-    public int compareToNumberOfTrain ( Train o){
+    public String getNameOfDestination() {
+        return nameOfDestination;
+    }
+
+    public String getNumberOfTrain() {
+        return numberOfTrain;
+    }
+
+    public String getTimeOfDeparture() {
+        return timeOfDeparture;
+    }
+
+    public int compareToNumberOfTrain(Train o) {
         return this.numberOfTrain.compareTo(o.numberOfTrain);
     }
 
@@ -30,11 +42,13 @@ public class Train {
                 ", timeOfDeparture='" + timeOfDeparture + '\'' +
                 '}';
     }
-    public int compareToNameOfDestination(Train o){
-        return this.nameOfDestination.compareTo(o.nameOfDestination);
-    }
 
-    public int compareToTimeOfDeparture(Train o){
-        return this.timeOfDeparture.compareTo(o.timeOfDeparture);
+    public int compareToTimeOfDeparture(Train o) {
+        int i = this.getNameOfDestination().compareTo(o.getNameOfDestination());
+        if (i == 0) {
+            return this.getTimeOfDeparture().compareTo(o.getTimeOfDeparture());
+        } else {
+            return i;
+        }
     }
 }

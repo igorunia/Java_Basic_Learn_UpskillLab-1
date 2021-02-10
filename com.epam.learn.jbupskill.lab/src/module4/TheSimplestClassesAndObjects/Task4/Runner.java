@@ -34,11 +34,15 @@ public class Runner {
 
         }
 
+        System.out.println("----");
+
         for (Train tr : trains){
-            if(tr.numberOfTrain.equals(numberOfTrain)){
+            if(tr.getNumberOfTrain().equals(numberOfTrain)){
                 System.out.println(tr);
             }
         }
+
+        System.out.println("-----");
 
         System.out.println("Before sorting");
         for (Train tr : trains) {
@@ -46,14 +50,12 @@ public class Runner {
         }
 
         System.out.println("After sorting");
-        trains.sort(Train::compareToNameOfDestination);
+        trains.sort(Train::compareToTimeOfDeparture);
 
         for (Train tr : trains) {
             System.out.println(tr);
 
         }
-
-
 
     }
 }

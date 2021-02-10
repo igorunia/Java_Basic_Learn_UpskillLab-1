@@ -7,9 +7,9 @@ package module4.TheSimplestClassesAndObjects.Task3;
  */
 
 public class Student {
-    public String nameStudents;
-    public int numberOfGroup;
-    public int[] ratingStudents;
+    private final String nameStudents;
+    private final int numberOfGroup;
+    private final int[] ratingStudents;
 
     public Student(String nameStudents, int numberOfGroup, int[] ratingStudents) {
         this.nameStudents = nameStudents;
@@ -17,10 +17,22 @@ public class Student {
         this.ratingStudents = ratingStudents;
     }
 
+    public String getNameStudents() {
+        return nameStudents;
+    }
+
+    public int getNumberOfGroup() {
+        return numberOfGroup;
+    }
+
+    public int[] getRatingStudents() {
+        return ratingStudents;
+    }
+
     public int getMinimalRating() {
 
         int minRating = Integer.MAX_VALUE;
-        for (int rating : ratingStudents) {
+        for (int rating : getRatingStudents()) {
             if (minRating > rating) {
                 minRating = rating;
             }

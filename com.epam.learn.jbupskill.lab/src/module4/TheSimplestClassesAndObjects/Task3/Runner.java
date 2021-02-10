@@ -21,7 +21,7 @@ public class Runner {
     public static void printExcellentStudent(Student[] students){
         for(Student student : students){
             if(student.getMinimalRating() >= 9){
-                System.out.println("Excellent student: " + student.nameStudents + student.numberOfGroup);
+                System.out.println("Excellent student: " + student.getNameStudents() + student.getNumberOfGroup());
             }
 
         }
