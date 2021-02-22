@@ -9,10 +9,10 @@ package module4.TheSimplestClassesAndObjects.Task5;
 
 public class Counter {
     private int currentValue;
-    private int minValue;
-    private int maxValue;
+    private final int minValue;
+    private final int maxValue;
 
-    Counter() {
+    public Counter() {
         this.currentValue = 0;
         this.minValue = 0;
         this.maxValue = 10;
@@ -28,22 +28,14 @@ public class Counter {
         return currentValue;
     }
 
-    public int getMinValue() {
-        return minValue;
-    }
-
-    public int getMaxValue() {
-        return maxValue;
-    }
-
     public void increaseValue() {
         currentValue++;
         if (currentValue == maxValue) {
             System.out.println("Upper Range Reached");
         } else if (currentValue > maxValue) {
             System.out.println("Invalid overshoot of the range");
+            currentValue--;
         }
-        currentValue--;
     }
 
     public void reduceValue() {
@@ -51,8 +43,9 @@ public class Counter {
         if (currentValue == minValue) {
             System.out.println("Upper Range Reached");
         } else if (currentValue < minValue) {
+
             System.out.println("Invalid overshoot of the range");
+            currentValue++;
         }
-        currentValue++;
     }
 }
