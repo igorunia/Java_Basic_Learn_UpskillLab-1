@@ -1,23 +1,32 @@
 package module4.TheSimplestClassesAndObjects.Task10;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 import java.time.DayOfWeek;
+import java.util.List;
 
 public class FlightSchedule {
-    private final String airportName;
-    private final ArrayList<Airline> airlines;
 
-    FlightSchedule(String airportName, ArrayList<Airline> airline) {
+    private static final DateTimeFormatter FT = DateTimeFormatter.ofPattern("H:m");
+
+    private final String airportName;
+    private final List<Airline> airlines;
+
+    public FlightSchedule(String airportName) {
+        this(airportName, new ArrayList<>());
+    }
+
+    public FlightSchedule(String airportName, List<Airline> airline) {
         this.airportName = airportName;
         this.airlines = airline;
     }
 
-    void addAirline(String destination, String flightNumber, String planeType, Date departureTime, DayOfWeek[] dayOfWeek) {
-        airlines.add(new Airline(destination, flightNumber, planeType, departureTime, dayOfWeek));
+    void addAirline(String destination, String flightNumber, String planeType, String departureTime, DayOfWeek[] dayOfWeek) {
+        airlines.add(new Airline(destination, flightNumber, planeType, getTime(departureTime), dayOfWeek));
     }
 
-    ArrayList<Airline> airlinesToDestination(String destination) {
+    List<Airline> airlinesToDestination(String destination) {
         ArrayList<Airline> airlines = new ArrayList<>();
         for (Airline airline : this.airlines) {
             if (airline.getDestination().equals(destination)) {
@@ -27,8 +36,8 @@ public class FlightSchedule {
         return airlines;
     }
 
-    ArrayList<Airline> flightDays(DayOfWeek dayOfWeek) {
-        ArrayList<Airline> airlines = new ArrayList<>();
+    List<Airline> flightDays(DayOfWeek dayOfWeek) {
+        List<Airline> airlines = new ArrayList<>();
         for (Airline airline : this.airlines) {
             for (DayOfWeek day : airline.getDayOfWeek()) {
                 if (day == dayOfWeek) {
@@ -39,19 +48,25 @@ public class FlightSchedule {
         return airlines;
     }
 
-    ArrayList<Airline> flightDays(DayOfWeek dayOfWeek, Date departureTime) {
-        ArrayList<Airline> airlines = new ArrayList<>();
+    List<Airline> flightDays(DayOfWeek dayOfWeek, String departureTimeString) {
+        LocalTime departureTime = getTime(departureTimeString);
+        List<Airline> airlines = new ArrayList<>();
         for (Airline airline : this.airlines) {
             for (DayOfWeek day : airline.getDayOfWeek()) {
-                if (day == dayOfWeek) {
-                    if (airline.getDepartureTime().compareTo(departureTime) >= 0) {
-                        airlines.add(airline);
-                    }
+                if (day == dayOfWeek && airline.getDepartureTime().isAfter(departureTime)) {
+                    airlines.add(airline);
                 }
             }
         }
         return airlines;
     }
 
+    public String getAirportName() {
+        return airportName;
+    }
+
+    private static LocalTime getTime(String time) {
+        return LocalTime.parse(time, FlightSchedule.FT);
+    }
 }
 

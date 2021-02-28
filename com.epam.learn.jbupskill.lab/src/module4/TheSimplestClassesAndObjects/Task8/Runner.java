@@ -2,10 +2,11 @@ package module4.TheSimplestClassesAndObjects.Task8;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 
 public class Runner {
     public static void main(String[] args) {
-        CustomerDate client = new CustomerDate("Clients", new ArrayList<>());
+        CustomerDate client = new CustomerDate(new ArrayList<>());
 
         client.addCustomer("B", "L", "S",
                 "Minsk", "11111", "12345678");
@@ -27,7 +28,7 @@ public class Runner {
         System.out.println("-------------------------------------------------");
 
         System.out.println("The customers' list whose credit card number is in the indicated interval: ");
-        ArrayList<Customer> list = client.getCustomerByCreditCardRange("2000", "500000");
+        List<Customer> list = client.getCustomerByCreditCardRange("2000", "500000");
         list.sort(Comparator.comparing(Customer::getCardNumber));
         if (list.size() == 0) {
             System.out.println("The bank card is not found ");

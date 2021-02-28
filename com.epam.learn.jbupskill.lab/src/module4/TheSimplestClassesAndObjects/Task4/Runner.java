@@ -1,6 +1,8 @@
 package module4.TheSimplestClassesAndObjects.Task4;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Runner {
         Train train2 = new Train("Brest", "8", "22.00");
         Train train3 = new Train("Gomel", "3", "23.00");
         Train train4 = new Train("Mogilev", "9", "20.00");
-        Train train5 = new Train("Grodno", "5", "19.00");
+        Train train5 = new Train("Grodno", "5", "9.00");
 
         List<Train> trains = new ArrayList<>();
 
@@ -37,7 +39,7 @@ public class Runner {
         System.out.println("----");
 
         for (Train tr : trains){
-            if(tr.getNumberOfTrain().equals(numberOfTrain)){
+            if(tr.getNumber().equals(numberOfTrain)){
                 System.out.println(tr);
             }
         }

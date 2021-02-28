@@ -12,13 +12,13 @@ package module4.TheSimplestClassesAndObjects.Task9;
  */
 public class Book {
 
-    private final String title;
-    private final String author;
-    private final String publisher;
-    private final String yearOfPublishing;
-    private final String numberOfPages;
-    private final String price;
-    private final String bindingType;
+    private String title;
+    private String author;
+    private String publisher;
+    private String yearOfPublishing;
+    private String numberOfPages;
+    private String price;
+    private String bindingType;
 
     public Book(String title, String author, String publisher, String yearOfPublishing, String numberOfPages, String price, String bindingType) {
 
@@ -44,15 +44,59 @@ public class Book {
                 '}';
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getAuthor() {
         return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getPublisher() {
         return publisher;
     }
 
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
     public String getYearOfPublishing() {
         return yearOfPublishing;
+    }
+
+    public void setYearOfPublishing(String yearOfPublishing) {
+        this.yearOfPublishing = yearOfPublishing;
+    }
+
+    public String getNumberOfPages() {
+        return numberOfPages;
+    }
+
+    public void setNumberOfPages(String numberOfPages) {
+        this.numberOfPages = numberOfPages;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getBindingType() {
+        return bindingType;
+    }
+
+    public void setBindingType(String bindingType) {
+        this.bindingType = bindingType;
     }
 }

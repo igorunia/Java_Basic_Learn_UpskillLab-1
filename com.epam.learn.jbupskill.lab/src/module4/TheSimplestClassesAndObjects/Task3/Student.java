@@ -7,32 +7,32 @@ package module4.TheSimplestClassesAndObjects.Task3;
  */
 
 public class Student {
-    private final String nameStudents;
+    private final String name;
     private final int numberOfGroup;
-    private final int[] ratingStudents;
+    private final int[] rating;
 
-    public Student(String nameStudents, int numberOfGroup, int[] ratingStudents) {
-        this.nameStudents = nameStudents;
+    public Student(String name, int numberOfGroup, int[] rating) {
+        this.name = name;
         this.numberOfGroup = numberOfGroup;
-        this.ratingStudents = ratingStudents;
+        this.rating = rating;
     }
 
-    public String getNameStudents() {
-        return nameStudents;
+    public String getName() {
+        return name;
     }
 
     public int getNumberOfGroup() {
         return numberOfGroup;
     }
 
-    public int[] getRatingStudents() {
-        return ratingStudents;
+    public int[] getRating() {
+        return rating;
     }
 
     public int getMinimalRating() {
 
         int minRating = Integer.MAX_VALUE;
-        for (int rating : getRatingStudents()) {
+        for (int rating : this.rating) {
             if (minRating > rating) {
                 minRating = rating;
             }

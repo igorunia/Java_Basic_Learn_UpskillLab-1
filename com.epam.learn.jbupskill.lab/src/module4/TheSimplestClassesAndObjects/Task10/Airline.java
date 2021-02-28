@@ -11,21 +11,18 @@ package module4.TheSimplestClassesAndObjects.Task10;
  *    c) список рейсов для заданного дня недели, время вылета для которых больше заданного.
  */
 
-import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
+import java.time.LocalTime;
 import java.util.Arrays;
-import java.util.Date;
 
 public class Airline {
     private final String destination;
     private final String flightNumber;
     private final String planeType;
-    private final Date departureTime;
+    private final LocalTime departureTime;
     private final DayOfWeek[] dayOfWeek;
 
-    static SimpleDateFormat ft = new SimpleDateFormat("HH:mm");
-
-    Airline(String destination, String flightNumber, String planeType, Date departureTime, DayOfWeek[] dayOfWeek) {
+    Airline(String destination, String flightNumber, String planeType, LocalTime departureTime, DayOfWeek[] dayOfWeek) {
         this.destination = destination;
         this.flightNumber = flightNumber;
         this.planeType = planeType;
@@ -49,7 +46,7 @@ public class Airline {
         return destination;
     }
 
-    public Date getDepartureTime() {
+    public LocalTime getDepartureTime() {
         return departureTime;
     }
 

@@ -1,5 +1,8 @@
 package module4.TheSimplestClassesAndObjects.Task4;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 /**
  * Создайте класс Train, содержащий поля: название пункта назначения, номер поезда, время отправления.
  * Создайте данные в массив из пяти элементов типа Train, добавьте возможность сортировки элементов массива по номерам
@@ -9,36 +12,36 @@ package module4.TheSimplestClassesAndObjects.Task4;
  */
 public class Train {
     private final String nameOfDestination;
-    private final String numberOfTrain;
-    private final String timeOfDeparture;
+    private final String number;
+    private final LocalTime timeOfDeparture;
 
-    public Train(String nameOfDestination, String numberOfTrain, String timeOfDeparture) {
+    public Train(String nameOfDestination, String number, String timeOfDeparture) {
         this.nameOfDestination = nameOfDestination;
-        this.numberOfTrain = numberOfTrain;
-        this.timeOfDeparture = timeOfDeparture;
+        this.number = number;
+        this.timeOfDeparture = LocalTime.parse(timeOfDeparture, DateTimeFormatter.ofPattern("H.m"));
     }
 
     public String getNameOfDestination() {
         return nameOfDestination;
     }
 
-    public String getNumberOfTrain() {
-        return numberOfTrain;
+    public String getNumber() {
+        return number;
     }
 
-    public String getTimeOfDeparture() {
+    public LocalTime getTimeOfDeparture() {
         return timeOfDeparture;
     }
 
     public int compareToNumberOfTrain(Train o) {
-        return this.numberOfTrain.compareTo(o.numberOfTrain);
+        return this.number.compareTo(o.number);
     }
 
     @Override
     public String toString() {
         return "Train{" +
                 "nameOfDestination='" + nameOfDestination + '\'' +
-                ", numberOfTrain='" + numberOfTrain + '\'' +
+                ", number='" + number + '\'' +
                 ", timeOfDeparture='" + timeOfDeparture + '\'' +
                 '}';
     }

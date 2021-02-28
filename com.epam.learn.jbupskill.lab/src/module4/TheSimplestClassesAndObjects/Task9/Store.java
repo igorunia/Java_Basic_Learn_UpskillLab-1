@@ -1,21 +1,28 @@
 package module4.TheSimplestClassesAndObjects.Task9;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Store {
-    public final String bookStoreName;
-    private final ArrayList<Book> bookList;
+    private final String bookStoreName;
+    private final List<Book> bookList;
 
-  public Store(String libraryName, ArrayList<Book> bookList) {
+    public Store(String libraryName) {
+        this.bookStoreName = libraryName;
+        this.bookList = new ArrayList<>();
+    }
+
+    public Store(String libraryName, List<Book> bookList) {
         this.bookStoreName = libraryName;
         this.bookList = bookList;
     }
-   public void addBook(String title, String author, String publisher, String yearOfPublishing, String numberOfPages, String price, String bindingType) {
+
+    public void addBook(String title, String author, String publisher, String yearOfPublishing, String numberOfPages, String price, String bindingType) {
         this.bookList.add(new Book(title, author, publisher, yearOfPublishing, numberOfPages, price, bindingType));
     }
 
-    ArrayList<Book> authorsBooks(String author) {
-        ArrayList<Book> authorList = new ArrayList<>();
+    List<Book> authorsBooks(String author) {
+        List<Book> authorList = new ArrayList<>();
         for (Book book : this.bookList) {
             if (book.getAuthor().equalsIgnoreCase(author)) {
                 authorList.add(book);
@@ -24,8 +31,8 @@ public class Store {
         return authorList;
     }
 
-    ArrayList<Book> publishersBook(String publisher) {
-        ArrayList<Book> publisherList = new ArrayList<>();
+    List<Book> publishersBook(String publisher) {
+        List<Book> publisherList = new ArrayList<>();
         for (Book book : this.bookList) {
             if (book.getPublisher().equalsIgnoreCase(publisher)) {
                 publisherList.add(book);
@@ -34,8 +41,8 @@ public class Store {
         return publisherList;
     }
 
-    ArrayList<Book> releasedAfter(String year) {
-        ArrayList<Book> releasedAfterList = new ArrayList<>();
+    List<Book> releasedAfter(String year) {
+        List<Book> releasedAfterList = new ArrayList<>();
         for (Book book : this.bookList) {
             if (book.getYearOfPublishing().equalsIgnoreCase(year)) {
                 releasedAfterList.add(book);
@@ -44,4 +51,7 @@ public class Store {
         return releasedAfterList;
     }
 
+    public String getBookStoreName() {
+        return bookStoreName;
+    }
 }

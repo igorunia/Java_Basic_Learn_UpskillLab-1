@@ -35,5 +35,13 @@ public class Test2 {
     public int getB() {
         return b;
     }
+
+    @Override
+    public String toString() {
+        return "Test2{" +
+                "a=" + a +
+                ", b=" + b +
+                '}';
+    }
 }
 
