@@ -3,7 +3,7 @@ package module5.BasicOfOOP.Task1;
 public class File {
     private String fileName;
 
-    public File(String fileName, Directory directory) {
+    public File(String fileName) {
         this.fileName = fileName;
     }
 
