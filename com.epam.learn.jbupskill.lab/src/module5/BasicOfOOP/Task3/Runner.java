@@ -14,6 +14,7 @@ public class Runner {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
         calendar.addHoliday(LocalDate.parse("01.01." + year, dtf), "New Year");
+        calendar.addHoliday(LocalDate.parse("01.02." + year, dtf), "New Year2");
 
 
         calendar.printHoliday();

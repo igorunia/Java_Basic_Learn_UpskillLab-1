@@ -18,7 +18,8 @@ public class Runner {
         System.out.println("Print a text file: ");
         textFile.printTextFile();
         System.out.println("Add to text file: ");
-        textFile.addToTextFile();
+        textFile.addToTextFile("daaha");
+        textFile.addToTextFile("daaha234");
         System.out.println("Delete a text file: ");
         textFile.deleteOfTextFile();
     }

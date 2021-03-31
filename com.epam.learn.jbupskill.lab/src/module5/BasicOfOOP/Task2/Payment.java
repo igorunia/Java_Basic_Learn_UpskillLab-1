@@ -34,6 +34,11 @@ public class Payment {
         goods.add(product);
     }
 
+    public void makePayment() {
+        double sum = goods.stream().mapToDouble(n -> n.getPrice()).sum();
+        makePayment(sum);
+    }
+
     public void makePayment(double deposit) {
         if (balance < deposit) {
             System.out.println("You paid: " + deposit );
@@ -42,11 +47,14 @@ public class Payment {
 
         } else if (balance == deposit) {
             System.out.println("You paid: " + deposit);
+            balance -= deposit;
             System.out.println("Thank you for paying without change.");
+            this.goods = new ArrayList<>();
         } else {
             System.out.println("You paid: " + deposit);
             balance -= deposit;
             System.out.println("Balance of payment: " + balance);
+            this.goods = new ArrayList<>();
         }
     }
 

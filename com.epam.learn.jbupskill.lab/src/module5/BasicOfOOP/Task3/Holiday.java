@@ -26,4 +26,12 @@ public class Holiday {
     public void setNameOfHoliday(String nameOfHoliday) {
         this.nameOfHoliday = nameOfHoliday;
     }
+
+    @Override
+    public String toString() {
+        return "Holiday{" +
+                "holidayDate=" + holidayDate +
+                ", nameOfHoliday='" + nameOfHoliday + '\'' +
+                '}';
+    }
 }

@@ -13,6 +13,7 @@ public class Runner {
         payment.addGoods(new Goods("Robot", 25));
 
         payment.makePayment( 100);
+        payment.makePayment();
 
     }
 

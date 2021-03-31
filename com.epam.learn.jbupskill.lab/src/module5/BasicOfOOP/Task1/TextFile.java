@@ -33,7 +33,7 @@ public class TextFile {
         this.file = file;
     }
 
-    public Path getPath() {
+    private Path getPath() {
         String path = directory.getFolderPath() + file.getFileName();
         return Path.of(path);
     }
@@ -43,7 +43,7 @@ public class TextFile {
     }
 
     public void renameTextFile(String s1) throws IOException {
-        Files.move(getPath(), getPath().getParent().resolve("s1.txt"));
+        Files.move(getPath(), getPath().getParent().resolve(s1));
     }
 
     public void printTextFile() throws IOException {
@@ -55,8 +55,8 @@ public class TextFile {
         System.out.println(lines);
     }
 
-    public void addToTextFile() throws IOException {
-        Files.writeString(getPath(), "daaha");
+    public void addToTextFile(String text) throws IOException {
+        Files.writeString(getPath(), text);
     }
 
     public void deleteOfTextFile() throws IOException {
