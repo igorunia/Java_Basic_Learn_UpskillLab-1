@@ -1,6 +1,7 @@
 package module5.BasicOfOOP.task4;
 
-import java.util.Collections;
+import module5.BasicOfOOP.task4.jewels.*;
+
 import java.util.Scanner;
 
 /**
@@ -23,107 +24,108 @@ public class Runner {
 
         Game game = new Game();
 
-        game.addJewels(new Jewels("Gold", 10));
-        game.addJewels(new Jewels("Silver", 15));
-        game.addJewels(new Jewels("Bronze", 20));
-        game.addJewels(new Jewels("Platinum", 30));
-        game.addJewels(new Jewels("Iron", 40));
-        game.addJewels(new Jewels("Diamond", 50));
-        game.addJewels(new Jewels("Apple", 60));
-        game.addJewels(new Jewels("Banana", 70));
-        game.addJewels(new Jewels("Box", 80));
-        game.addJewels(new Jewels("Arm", 90));
-        game.addJewels(new Jewels("Heart", 100));
-        game.addJewels(new Jewels("Eye", 1110));
-        game.addJewels(new Jewels("Hair", 110));
-        game.addJewels(new Jewels("Leg", 1110));
-        game.addJewels(new Jewels("Head", 1550));
-        game.addJewels(new Jewels("Brains", 1550));
-        game.addJewels(new Jewels("Car", 1510));
-        game.addJewels(new Jewels("House", 15150));
-        game.addJewels(new Jewels("Gun", 145630));
-        game.addJewels(new Jewels("Tea", 16460));
-        game.addJewels(new Jewels("Coffee", 145640));
-        game.addJewels(new Jewels("Furniture", 16460));
-        game.addJewels(new Jewels("Cooker", 14640));
-        game.addJewels(new Jewels("Computer", 14640));
-        game.addJewels(new Jewels("Sink", 1460));
-        game.addJewels(new Jewels("Meat", 14640));
-        game.addJewels(new Jewels("Fish", 14640));
-        game.addJewels(new Jewels("Desk", 14640));
-        game.addJewels(new Jewels("Horn", 1460));
-        game.addJewels(new Jewels("Cow", 104));
-        game.addJewels(new Jewels("Cat", 6464));
-        game.addJewels(new Jewels("Dog", 1046));
-        game.addJewels(new Jewels("Bird", 14640));
-        game.addJewels(new Jewels("Horse", 140));
-        game.addJewels(new Jewels("Pig", 64466));
-        game.addJewels(new Jewels("Frog", 4));
-        game.addJewels(new Jewels("Egg", 1046));
-        game.addJewels(new Jewels("Mobile", 1460));
-        game.addJewels(new Jewels("TV", 1460));
-        game.addJewels(new Jewels("Bed", 104));
-        game.addJewels(new Jewels("Sofa", 1640));
-        game.addJewels(new Jewels("Chair", 1467670));
-        game.addJewels(new Jewels("Window", 1760));
-        game.addJewels(new Jewels("Door", 10767));
-        game.addJewels(new Jewels("Battery", 1076));
-        game.addJewels(new Jewels("Pen", 17670));
-        game.addJewels(new Jewels("Flash card", 1076));
-        game.addJewels(new Jewels("Flower", 1076));
-        game.addJewels(new Jewels("Tree", 10767));
-        game.addJewels(new Jewels("Boat", 17670));
-        game.addJewels(new Jewels("Boot", 107));
-        game.addJewels(new Jewels("Wallet", 1076));
-        game.addJewels(new Jewels("Mushroom", 10767));
-        game.addJewels(new Jewels("Paper", 1076));
-        game.addJewels(new Jewels("Pepper", 1760));
-        game.addJewels(new Jewels("Sugar", 1076));
-        game.addJewels(new Jewels("Salt", 1760));
-        game.addJewels(new Jewels("Flour", 1760));
-        game.addJewels(new Jewels("Flat", 176));
-        game.addJewels(new Jewels("Shit", 1760));
-        game.addJewels(new Jewels("Cup", 1076));
-        game.addJewels(new Jewels("Vino", 1076));
-        game.addJewels(new Jewels("Vodka", 1076));
-        game.addJewels(new Jewels("Ball", 1076));
-        game.addJewels(new Jewels("Calendar", 1076));
-        game.addJewels(new Jewels("Umbrella", 1076));
-        game.addJewels(new Jewels("Skirt", 1067));
-        game.addJewels(new Jewels("Cake", 1670));
-        game.addJewels(new Jewels("Peach", 1760));
-        game.addJewels(new Jewels("Melon", 1760));
-        game.addJewels(new Jewels("Grapes", 1760));
-        game.addJewels(new Jewels("Pencil", 1760));
-        game.addJewels(new Jewels("Jeans", 1760));
-        game.addJewels(new Jewels("Jacket", 17660));
-        game.addJewels(new Jewels("Ring", 1066));
-        game.addJewels(new Jewels("Chain", 15870));
-        game.addJewels(new Jewels("Plain", 1280));
-        game.addJewels(new Jewels("Ship", 1280));
-        game.addJewels(new Jewels("Jeep", 120));
-        game.addJewels(new Jewels("Mirror", 1280));
-        game.addJewels(new Jewels("Bag", 1280));
-        game.addJewels(new Jewels("Carpet", 1028));
-        game.addJewels(new Jewels("Bread", 12880));
-        game.addJewels(new Jewels("Potato", 1082));
-        game.addJewels(new Jewels("Water", 1028));
-        game.addJewels(new Jewels("Coco-cola", 1280));
-        game.addJewels(new Jewels("Pepsi", 109));
-        game.addJewels(new Jewels("Tiger", 1029));
-        game.addJewels(new Jewels("Lion", 1360));
-        game.addJewels(new Jewels("Elephant", 1036));
-        game.addJewels(new Jewels("Giraffe", 1036));
-        game.addJewels(new Jewels("Wolf", 1036));
-        game.addJewels(new Jewels("Bear", 1036));
-        game.addJewels(new Jewels("Beer", 1036));
-        game.addJewels(new Jewels("Card", 1036));
-        game.addJewels(new Jewels("Fridge", 1036));
-        game.addJewels(new Jewels("Pizza", 1063));
-        game.addJewels(new Jewels("Cheese", 1063));
-        game.addJewels(new Jewels("Cherry", 1280));
-        game.addJewels(new Jewels("Camera", 1380));
-        game.addJewels(new Jewels("Book", 12580));
+
+        game.addJewels(new ValuableMetals("Gold", 10));
+        game.addJewels(new ValuableMetals("Silver", 15));
+        game.addJewels(new ValuableMetals("Bronze", 20));
+        game.addJewels(new ValuableMetals("Platinum", 30));
+        game.addJewels(new ValuableMetals("Iron", 40));
+        game.addJewels(new ValuableMetals("Diamond", 50));
+        game.addJewels(new Fruit("Apple", 60));
+        game.addJewels(new Fruit("Banana", 70));
+        game.addJewels(new Fruit("apricot", 80));
+        game.addJewels(new Fruit("avocado", 90));
+        game.addJewels(new Fruit("pineapple", 100));
+        game.addJewels(new Fruit("bergamot", 1110));
+        game.addJewels(new Fruit("durian", 110));
+        game.addJewels(new Fruit("grapefruit", 1110));
+        game.addJewels(new Fruit("kiwi", 1550));
+        game.addJewels(new Fruit("lime", 1550));
+        game.addJewels(new Fruit("lemon", 1510));
+        game.addJewels(new Fruit("loquat", 15150));
+        game.addJewels(new Fruit("mango", 145630));
+        game.addJewels(new Fruit("melon", 16460));
+        game.addJewels(new Fruit("nectarine", 145640));
+        game.addJewels(new Fruit("orange", 16460));
+        game.addJewels(new Fruit("passion fruit", 14640));
+        game.addJewels(new Fruit("papaya", 14640));
+        game.addJewels(new Fruit("peach", 1460));
+        game.addJewels(new Fruit("pear", 14640));
+        game.addJewels(new Fruit("persimmon", 14640));
+        game.addJewels(new Fruit("pineapple", 14640));
+        game.addJewels(new Fruit("plum", 1460));
+        game.addJewels(new Fruit("pomegranate", 104));
+        game.addJewels(new Fruit("pomelo", 6464));
+        game.addJewels(new Fruit("quince", 1046));
+        game.addJewels(new Fruit("tangerine", 14640));
+        game.addJewels(new Berries("barberry", 140));
+        game.addJewels(new Berries("blackberry", 64466));
+        game.addJewels(new Berries("black chokeberry", 4));
+        game.addJewels(new Berries("blueberry ", 1046));
+        game.addJewels(new Berries("buckthorn", 1460));
+        game.addJewels(new Berries("cherry", 1460));
+        game.addJewels(new Berries("cloudberry", 104));
+        game.addJewels(new Berries("cowberry", 1640));
+        game.addJewels(new Berries("cranberry", 1467670));
+        game.addJewels(new Berries("currant", 1760));
+        game.addJewels(new Berries("date", 10767));
+        game.addJewels(new Berries("dogwood", 1076));
+        game.addJewels(new Berries("elder", 17670));
+        game.addJewels(new Berries("fig", 1076));
+        game.addJewels(new Berries("grape", 1076));
+        game.addJewels(new Berries("goji berry", 10767));
+        game.addJewels(new Berries("gooseberry", 17670));
+        game.addJewels(new Berries("raspberry", 107));
+        game.addJewels(new Berries("ros hip", 1076));
+        game.addJewels(new Berries("rowan", 10767));
+        game.addJewels(new Berries("strawberry", 1076));
+        game.addJewels(new Berries("sweet cherry", 1760));
+        game.addJewels(new Berries("viburnum", 1076));
+        game.addJewels(new Berries("wild strawberry", 1760));
+        game.addJewels(new Vegetables("watermelon", 1760));
+        game.addJewels(new Vegetables("asparagus", 176));
+        game.addJewels(new Vegetables("beans", 1760));
+        game.addJewels(new Vegetables("beet", 1076));
+        game.addJewels(new Vegetables("broccoli", 1076));
+        game.addJewels(new Vegetables("brussels sprouts", 1076));
+        game.addJewels(new Vegetables("cabbage", 1076));
+        game.addJewels(new Vegetables("carrot", 1076));
+        game.addJewels(new Vegetables("cauliflower", 1076));
+        game.addJewels(new Vegetables("celery", 1067));
+        game.addJewels(new Vegetables("chili", 1670));
+        game.addJewels(new Vegetables("chinese cabbage", 1760));
+        game.addJewels(new Vegetables("corn", 1760));
+        game.addJewels(new Vegetables("cucumber", 1760));
+        game.addJewels(new Vegetables("daikon", 1760));
+        game.addJewels(new Vegetables("eggplant", 1760));
+        game.addJewels(new Vegetables("garlic", 17660));
+        game.addJewels(new Vegetables("green bea", 1066));
+        game.addJewels(new Vegetables("kale", 15870));
+        game.addJewels(new Vegetables("lettuce", 1280));
+        game.addJewels(new Vegetables("okra", 1280));
+        game.addJewels(new Vegetables("onion", 120));
+        game.addJewels(new Vegetables("parsley", 1280));
+        game.addJewels(new Vegetables("pepper", 1280));
+        game.addJewels(new Vegetables("peas", 1028));
+        game.addJewels(new Vegetables("potato", 12880));
+        game.addJewels(new Vegetables("pumpkin ", 1082));
+        game.addJewels(new Vegetables("radish", 1028));
+        game.addJewels(new Vegetables("spinach", 1280));
+        game.addJewels(new Vegetables("tomatoes", 109));
+        game.addJewels(new Nuts("turnips", 1029));
+        game.addJewels(new Nuts("acorn", 1360));
+        game.addJewels(new Nuts("almond ", 1036));
+        game.addJewels(new Nuts("beechnut", 1036));
+        game.addJewels(new Nuts("cashew", 1036));
+        game.addJewels(new Nuts("chestnut", 1036));
+        game.addJewels(new Nuts("coconut", 1036));
+        game.addJewels(new Nuts("hazelnut", 1036));
+        game.addJewels(new Nuts("nutmeg", 1036));
+        game.addJewels(new Nuts("peanut", 1063));
+        game.addJewels(new Nuts("pecan", 1063));
+        game.addJewels(new Nuts("pine nut", 1280));
+        game.addJewels(new Nuts("pistachio", 1380));
+        game.addJewels(new Nuts("walnut", 12580));
 
         Scanner scanner = new Scanner(System.in);
 
@@ -135,7 +137,7 @@ public class Runner {
                 System.out.println("Jewels viewing: ");
                 game.viewingJewels();
             } else if (variant == 2) {
-                System.out.println("The most expensive jewels: " );
+                System.out.println("The most expensive jewels: ");
                 game.maxPriceJewels();
 
 
@@ -146,8 +148,6 @@ public class Runner {
             break;
 
         }
-
-
 
     }
 

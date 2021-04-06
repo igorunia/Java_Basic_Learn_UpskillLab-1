@@ -1,4 +1,4 @@
-package module5.BasicOfOOP.task4;
+package module5.BasicOfOOP.task4.jewels;
 
 public class Jewels {
 
@@ -26,3 +26,5 @@ public class Jewels {
         this.price = price;
     }
 }
+
+
