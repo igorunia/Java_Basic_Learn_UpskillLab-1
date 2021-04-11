@@ -9,6 +9,9 @@ public class Candy extends Product {
 
     @Override
     public String toString() {
-        return "Candy{}";
+        return "Candy{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

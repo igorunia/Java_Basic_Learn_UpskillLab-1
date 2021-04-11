@@ -6,17 +6,17 @@ import java.util.List;
 public class Present {
     private String name;
     private double price;
-    private List<Wrap> wrap;
+    private Wrap wrap;
     private List<Product> product;
 
-    public Present(String name, double price) {
+    public Present(String name, double price, Wrap wrap) {
         this.name = name;
         this.price = price;
-        this.wrap = new ArrayList<>();
+        this.wrap = wrap;
         this.product = new ArrayList<>();
     }
 
-    public Present(Wrap box, Candy mars, Product car) {
+    public Present() {
 
     }
 
@@ -36,11 +36,11 @@ public class Present {
         this.price = price;
     }
 
-    public List<Wrap> getWrap() {
+    public Wrap getWrap() {
         return wrap;
     }
 
-    public void setWrap(List<Wrap> wrap) {
+    public void setWrap(Wrap wrap) {
         this.wrap = wrap;
     }
 
@@ -51,4 +51,10 @@ public class Present {
     public void setProduct(List<Product> product) {
         this.product = product;
     }
+
+    public Present(Wrap wrap, Product product) {
+        this.product.add(product);
+
+    }
+
 }

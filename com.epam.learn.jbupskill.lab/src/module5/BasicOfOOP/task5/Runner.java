@@ -24,8 +24,11 @@ public class Runner {
 
         Action action = new Action();
 
-        action.addPresent(new Present(new Wrap("box"), new Candy("Mars", 15), new Product("car", 52)));
-        action.viewingPresents();
+        Present present = new Present(new Wrap("Box"), new Candy("Mars",15));
+
+        action.printPresents(present);
+
+
 
     }
 }

@@ -1,13 +1,12 @@
 package module5.BasicOfOOP.task5;
 
-import module5.BasicOfOOP.task4.jewels.Jewels;
 import module5.BasicOfOOP.task5.presents.Present;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Action {
-    private List<Present>presents;
+    private List<Present> presents;
 
     public Action() {
         this.presents = new ArrayList<>();
@@ -21,15 +20,14 @@ public class Action {
         this.presents = presents;
     }
 
-    public void addPresent(Present present){
+    public void addPresent(Present present) {
         presents.add(present);
 
     }
 
-    public void viewingPresents() {
-        for (Present present : presents) {
-            System.out.println(present.getName() + " " +  present.getPrice());
-        }
+    public void printPresents(Present present) {
+        System.out.println(present);
+
     }
 
 }

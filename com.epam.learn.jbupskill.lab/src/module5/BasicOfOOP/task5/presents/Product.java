@@ -1,8 +1,8 @@
 package module5.BasicOfOOP.task5.presents;
 
-public class Product {
-    private String name;
-    private double price;
+public abstract class Product {
+    protected String name;
+    protected double price;
 
     public Product(String name, double price) {
         this.name = name;
