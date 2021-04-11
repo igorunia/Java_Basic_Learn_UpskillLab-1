@@ -23,18 +23,15 @@ public class Runner {
 
 
         Action action = new Action();
-        int hCode;
+
         Present present = PresentBuilder.newBuilder()
                 .withName("Happy Birthday")
                 .withWrap(new Wrap("Box"))
                 .addProduct(new Candy("Mars", 15))
                 .addProduct(new Candy("Snickers", 11))
                 .build();
-        hCode = action.hashCode();
-        System.out.println(hCode);
-
+        action.addPresents(present);
         action.printPresents(present);
-
 
     }
 }

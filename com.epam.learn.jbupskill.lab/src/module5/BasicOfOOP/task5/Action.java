@@ -13,6 +13,18 @@ public class Action {
         this.presents = new ArrayList<>();
     }
 
+    public List<Present> getPresents() {
+        return presents;
+    }
+
+    public void setPresents(List<Present> presents) {
+        this.presents = presents;
+    }
+
+    public void addPresents(Present present){
+        presents.add(present);
+    }
+
     public void printPresents(Present present) {
         System.out.println(present);
 

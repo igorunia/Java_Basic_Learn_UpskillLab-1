@@ -30,7 +30,11 @@ public class PresentBuilder {
     }
 
     public PresentBuilder addProduct(Product product) {
-        present.getProducts().add(product);
+
+        if (product.getPrice() <= 0) {
+            System.out.println("It is not product");
+        } else
+            present.getProducts().add(product);
         return this;
     }
 
