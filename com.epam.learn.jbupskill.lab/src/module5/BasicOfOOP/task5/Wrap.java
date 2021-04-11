@@ -1,4 +1,4 @@
-package module5.BasicOfOOP.task5.presents;
+package module5.BasicOfOOP.task5;
 
 public class Wrap {
     private String name;
@@ -13,5 +13,12 @@ public class Wrap {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Wrap{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }

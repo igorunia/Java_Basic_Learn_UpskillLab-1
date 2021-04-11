@@ -1,4 +1,4 @@
-package module5.BasicOfOOP.task5.presents;
+package module5.BasicOfOOP.task5.products;
 
 public abstract class Product {
     protected String name;
@@ -23,5 +23,13 @@ public abstract class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

@@ -1,9 +1,8 @@
 package module5.BasicOfOOP.task5;
 
-import module5.BasicOfOOP.task5.presents.Candy;
-import module5.BasicOfOOP.task5.presents.Present;
-import module5.BasicOfOOP.task5.presents.Product;
-import module5.BasicOfOOP.task5.presents.Wrap;
+import module5.BasicOfOOP.task5.present.Present;
+import module5.BasicOfOOP.task5.present.PresentBuilder;
+import module5.BasicOfOOP.task5.products.Candy;
 
 /**
  * Создать консольное приложение, удовлетворяющее следующим требованиям:
@@ -22,12 +21,19 @@ import module5.BasicOfOOP.task5.presents.Wrap;
 public class Runner {
     public static void main(String[] args) {
 
-        Action action = new Action();
 
-        Present present = new Present(new Wrap("Box"), new Candy("Mars",15));
+        Action action = new Action();
+        int hCode;
+        Present present = PresentBuilder.newBuilder()
+                .withName("Happy Birthday")
+                .withWrap(new Wrap("Box"))
+                .addProduct(new Candy("Mars", 15))
+                .addProduct(new Candy("Snickers", 11))
+                .build();
+        hCode = action.hashCode();
+        System.out.println(hCode);
 
         action.printPresents(present);
-
 
 
     }

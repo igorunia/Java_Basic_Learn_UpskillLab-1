@@ -1,4 +1,4 @@
-package module5.BasicOfOOP.task5.presents;
+package module5.BasicOfOOP.task5.products;
 
 public class Candy extends Product {
 
