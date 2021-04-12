@@ -21,13 +21,14 @@ public class Action {
         this.presents = presents;
     }
 
-    public void addPresents(Present present){
+    public void addPresents(Present present) {
         presents.add(present);
     }
 
-    public void printPresents(Present present) {
-        System.out.println(present);
-
+    public void printPresents() {
+        for (Present present : presents) {
+            System.out.println(present);
+        }
     }
 }
 
