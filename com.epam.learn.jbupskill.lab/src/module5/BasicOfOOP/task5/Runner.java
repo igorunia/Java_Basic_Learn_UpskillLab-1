@@ -31,7 +31,7 @@ public class Runner {
                 .addProduct(new Candy("Snickers", 11))
                 .build();
         action.addPresents(present);
-        action.printPresents(present);
+        action.printPresents();
 
     }
 }
